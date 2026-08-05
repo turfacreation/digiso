@@ -81,6 +81,9 @@ Home 2 Footer CSS Start
 ===========================================*/
 
 .tc_footer_section_home2 {
+	@media (max-width: 575.98px) {
+						padding: 0 15px;
+					}
 	.footer_content {
 		.footer_menu {
 			.footer_item {
@@ -107,12 +110,12 @@ Home 2 Footer CSS Start
 				.cms {
 					padding-left: 15px;
 					@media (max-width: 767.98px) {
-						order: 3;
+						order: 4;
 					}
 				}
 				.branding_agency {
 					@media (max-width: 767.98px) {
-						order: 4;
+						order: 3;
 					}
 
 					p {

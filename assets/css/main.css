@@ -4258,6 +4258,11 @@ Portfolio CSS for Home_2
 /*===========================================
 Home 2 Footer CSS Start
 ===========================================*/
+@media (max-width: 575.98px) {
+  .tc_footer_section_home2 {
+    padding: 0 15px;
+  }
+}
 .tc_footer_section_home2 .footer_content .footer_menu .footer_item {
   display: -ms-grid;
   display: grid;
@@ -4300,16 +4305,16 @@ Home 2 Footer CSS Start
 }
 @media (max-width: 767.98px) {
   .tc_footer_section_home2 .footer_content .footer_menu .footer_item .cms {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
   }
 }
 @media (max-width: 767.98px) {
   .tc_footer_section_home2 .footer_content .footer_menu .footer_item .branding_agency {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
 }
 .tc_footer_section_home2 .footer_content .footer_menu .footer_item .branding_agency p {
