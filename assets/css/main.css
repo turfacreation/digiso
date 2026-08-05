@@ -732,6 +732,10 @@ h5 {
   padding: 80px 0;
 }
 
+.pb-80 {
+  padding-bottom: 80px;
+}
+
 .py-40 {
   padding-top: 22px;
   padding-bottom: 40px;
@@ -4069,6 +4073,9 @@ Portfolio CSS for Home_2
   margin-top: 12px;
 }
 .tc_blog_home2_section .blog_cta_main {
+  position: relative;
+  bottom: 144px;
+  left: 0;
   border-radius: 30px 0px 30px 0px;
 }
 .tc_blog_home2_section .blog_cta_main .blog_cta_content {
@@ -4251,20 +4258,20 @@ Portfolio CSS for Home_2
 /*===========================================
 Home 2 Footer CSS Start
 ===========================================*/
-.tc_footer_section_home2 .menu li a .btn_normal {
+.tc_footer_section_home2 .footer_content .footer_menu .menu li a .btn_normal {
   color: var(--paragraph-color);
 }
-.tc_footer_section_home2 .branding_agency p {
+.tc_footer_section_home2 .footer_content .footer_menu .branding_agency p {
   max-width: 250px;
 }
-.tc_footer_section_home2 .social_icon ul li a img {
+.tc_footer_section_home2 .footer_content .footer_menu .social_icon ul li a img {
   width: 25px;
   height: 25px;
   border: 1px solid var(--border);
   padding: 5px;
   border-radius: 100px;
 }
-.tc_footer_section_home2 .footer_copyright {
+.tc_footer_section_home2 .footer_content .footer_menu .footer_copyright {
   border-top: 1px solid var(--border);
 }
 

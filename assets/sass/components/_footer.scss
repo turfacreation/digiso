@@ -81,6 +81,8 @@ Home 2 Footer CSS Start
 ===========================================*/
 
 .tc_footer_section_home2 {
+	.footer_content{
+		.footer_menu{
 	.menu {
 		li {
 			a {
@@ -113,6 +115,9 @@ Home 2 Footer CSS Start
 	.footer_copyright {
 		border-top: 1px solid var(--border);
 	}
+		}
+	}
+
 }
 /* back to top button */
 .scroll-to-top {
