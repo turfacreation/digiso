@@ -1,0 +1,284 @@
+/*=============================
+	11. Form fields CSS Start
+===============================*/
+
+/* Form input css */
+.input-group {
+  .icon {
+    position: relative;
+    z-index: 9;
+  }
+
+  .form-control,
+  .form-select {
+    height: 56px;
+    padding: 0 23px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--bs-black-color);
+    transition: var(--bs-transition);
+    opacity: 1;
+
+    &::placeholder {
+      color: var(--bs-paragraph-color);
+    }
+
+    &:focus {
+      border-color: var(--bs-primary-color);
+    }
+  }
+
+  .form-control {
+    padding-right: 50px;
+  }
+
+  .icon {
+    right: 23px;
+
+    i {
+      color: var(--bs-white-color);
+      font-size: 15px;
+    }
+  }
+
+  .form-select {
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 12px 12px;
+
+    option {
+      color: var(--bs-black-color);
+    }
+
+    &.white {
+      &::after {
+        border-color: var(--bs-white-color);
+      }
+    }
+
+    &.primary {
+      &::after {
+        border-color: var(--bs-primary-color);
+      }
+    }
+
+    &:focus {
+      border-color: var(--bs-primary-color);
+    }
+  }
+
+  .textarea-control {
+    height: 130px;
+    padding: 20px;
+    border-radius: 30px !important;
+    resize: none;
+
+    &::placeholder {
+      color: var(--bs-paragraph-color);
+      opacity: 1;
+    }
+  }
+
+  .slider-wrapper {
+    --thumb-diameter: 20px;
+    --thumb-radius: calc(var(--thumb-diameter) / 2);
+    --track-border-width: 1px;
+    --value: 50;
+    --pos: calc(var(--thumb-radius) + .01 * var(--value) *(100% - var(--thumb-diameter)));
+    width: 100%;
+    text-align: center;
+  }
+
+  .slider-tooltip {
+    --tooltip-border-width: 1px;
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-left: calc(var(--pos) + var(--track-border-width));
+    border: var(--tooltip-border-width) solid var(--tooltip-border-color);
+    margin-bottom: 10px;
+    white-space: nowrap;
+    color: var(--bs-white-color);
+    background-color: var(--tooltip-background);
+    translate: calc(-50%);
+    height: 25px;
+  }
+
+  input[type="range"].slider {
+    --track-height: 10px;
+    --track-background: linear-gradient(#E10006, #E10006);
+    --thumb-background: var(--bs-primary-color);
+    --thumb-border: 1px solid var(--bs-white-color);
+    display: block;
+    -webkit-appearance: none;
+    box-sizing: content-box;
+    width: 100%;
+    height: var(--track-height);
+    margin: 0;
+    border-radius: 50px;
+    outline: none;
+    background: var(--bs-white-color);
+    background-image: var(--track-background);
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-size: var(--pos) var(--track-height);
+    cursor: pointer;
+  }
+
+  input[type="range"].slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    width: var(--thumb-diameter);
+    height: var(--thumb-diameter);
+    border: var(--thumb-border);
+    border-radius: 50%;
+    background: var(--thumb-background);
+    cursor: pointer;
+  }
+
+  input[type="range"].slider::-moz-range-thumb {
+    box-sizing: border-box;
+    width: var(--thumb-diameter);
+    height: var(--thumb-diameter);
+    border: var(--thumb-border);
+    border-radius: 50%;
+    background: var(--thumb-background);
+    cursor: pointer;
+  }
+}
+
+/* Toggle switch css */
+.switch-toggle {
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 105px;
+    height: 28px;
+  }
+
+  .switch input {
+    display: none;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--bs-transition);
+    border-radius: 50px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 18px;
+    left: 5px;
+    bottom: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: var(--bs-transition);
+    border-radius: 50px;
+  }
+
+  input:checked+.slider {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+
+  input:checked+.slider:before {
+    transform: translateX(48px);
+  }
+
+  .slider:after {
+    content: 'Freezer';
+    color: var(--bs-white-color);
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    font-size: 10px;
+  }
+
+  input:checked+.slider:after {
+    content: 'Normal';
+    right: unset;
+    left: 10px;
+  }
+
+  &.style2 {
+    .slider {
+      background: var(--bs-white-color);
+
+      &::after {
+        color: var(--bs-black-color);
+      }
+
+      &::before {
+        background: var(--bs-black-color);
+      }
+    }
+
+    input:checked+.slider {
+      background: var(--bs-white-color);
+    }
+  }
+}
+
+/* Nice select css */
+.nice-select {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--bs-black);
+
+  span {
+    line-height: 58px;
+  }
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus {
+  background-color: var(--bs-bg-color1);
+}
+
+.nice-select.open .list {
+
+  li {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--bs-black);
+  }
+}
+
+.nice-select:after {
+  border-bottom: 2px solid var(--bs-black);
+  border-right: 2px solid var(--bs-black);
+  content: '';
+  display: block;
+  height: 8px;
+  margin-top: -6px;
+  pointer-events: none;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform-origin: 66% 66%;
+  -ms-transform-origin: 66% 66%;
+  transform-origin: 66% 66%;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  width: 8px;
+}

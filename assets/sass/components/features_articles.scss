@@ -1,0 +1,63 @@
+/*=============================
+	09. Features Articles CSS Start
+===============================*/
+@use "./common/common";
+
+.tc_feature_articles_section {
+	.container {
+		.feature_articles_main {
+			background: var(--white-color);
+			.feature_articles_item {
+				position: relative;
+
+				.feature_articles_card {
+					padding: 44px 0;
+					border: 1px solid #e5e7eb;
+					position: relative;
+					cursor: pointer;
+					justify-content: space-between;
+					height: 220px;
+
+					.feature_articles_image {
+						position: absolute;
+						top: 50%;
+						left: 18%;
+						transform: translateY(-49%) rotate(6deg);
+						z-index: 10;
+						pointer-events: none;
+						opacity: 0;
+						transition: opacity 0.3s ease;
+
+						img {
+							width: 265px;
+							height: 300px;
+						}
+					}
+
+					&.feature_card-hover-trigger:hover .feature_articles_image {
+						opacity: 1 !important;
+					}
+
+					&.feature_articles_default_card .feature_articles_fixed_image {
+						opacity: 1 !important;
+					}
+				}
+
+				&:has(.feature_card-hover-trigger:hover) {
+					.feature_articles_fixed_image {
+						opacity: 0 !important;
+					}
+				}
+
+				.feature_articles_heading {
+					max-width: 650px;
+					font-size: 32px;
+					line-height: 135%;
+				}
+			}
+			.row {
+				margin: 0;
+			}
+		}
+	}
+}

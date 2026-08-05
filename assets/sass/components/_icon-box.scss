@@ -1,0 +1,47 @@
+/*=============================
+	10. Icon box CSS Start
+===============================*/
+.social-icon {
+  ul {
+    li {
+      a {
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.07);
+        color: var(--bs-white-color);
+
+        &:hover {
+          background: var(--bs-primary-color);
+        }
+      }
+    }
+  }
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  transition: var(--bs-transition);
+  background: var(--bs-primary-color);
+
+  &.icon-box-border {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--bs-white-color);
+    background: transparent;
+  }
+}
+
+.call-us-btn {
+  .icon {
+    font-size: 24px;
+    width: 56px;
+    height: 56px;
+    transition: var(--bs-transition);
+  }
+
+  &:hover {
+    .icon {
+      background: var(--bs-primary-color);
+    }
+  }
+}

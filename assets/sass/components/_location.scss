@@ -1,0 +1,71 @@
+/*=============================
+	27. Location CSS Start
+===============================*/
+
+.ep-location-section {
+  width: 100%;
+
+  .overlay {
+    padding: 70px 0;
+    background: linear-gradient(90deg, #7B0003 0.04%, #A30005 14.92%, rgba(150, 0, 4, 0.77) 37.23%, rgba(225, 0, 6, 0.00) 62.86%, #8D0004 90.23%);
+
+    .text {
+      .title {
+        font-size: 36px;
+        line-height: 46px;
+      }
+
+      a {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background: var(--bs-white-color);
+          content: "";
+          transition: var(--bs-transition);
+        }
+
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .image {
+      padding-left: 100px;
+
+      @media (max-width: 1199.98px) {
+        padding-left: 50px;
+      }
+
+      @media (max-width: 991.98px) {
+        padding-left: 20px;
+      }
+
+      .arrow {
+        animation: arrowMove 2s infinite ease-in-out;
+      }
+
+      .circle1,
+      .circle2,
+      .circle3 {
+        transform-origin: center;
+        animation: mapRipple 3s ease-out infinite;
+      }
+
+      .circle2 {
+        animation-delay: 0.5s;
+      }
+
+      .circle3 {
+        animation-delay: 1s;
+      }
+    }
+  }
+}

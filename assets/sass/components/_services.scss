@@ -1,0 +1,345 @@
+/*=============================
+	15. Services CSS Start
+===============================*/
+/* service section one */
+.tc_service_section {
+  @media (max-width: 575.98px) {
+    padding: 0 24px;
+  }
+  .section_title {
+    padding: 0 76px;
+    @media (max-width: 1399.98px) {
+      padding: 0 24px;
+    }
+    @media (max-width: 991.98px) {
+      padding: 0px;
+    }
+    .title {
+      max-width: 440px;
+      @media (max-width: 767.98px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .container {
+    &::before,
+    &::after {
+      width: 1px;
+      height: 100%;
+      background: var(--border);
+      position: absolute;
+      top: 0;
+      content: "";
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+  }
+  // .home_services_item {
+  // 	border-top: 1px solid var(--border);
+  // 	border-bottom: 1px solid var(--border);
+  // 	padding: 49px 110px;
+  // 	transition: var(--transition);
+  // 	&:hover {
+  // 		background: var(--border);
+  // 		border-top: 1px solid var(--primary-color);
+  // 		border-bottom: 1px solid var(--primary-color);
+  // 	}
+  .services_item {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 49px 110px;
+    transition: var(--transition);
+    @media (max-width: 1399.98px) {
+      padding: 49px 24px;
+    }
+    @media (max-width: 991.98px) {
+      padding: 20px 0px;
+    }
+
+    &:hover {
+      background: var(--bg-color1);
+
+      h3 {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    h3 {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 6px;
+      transition: color 0.3s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: var(--paragraph-color, #00f3ff);
+        transition: width 0.4s ease-in-out;
+
+        box-shadow:
+          0 0 5px var(--white-color, #00f3ff),
+          0 0 15px var(--white-color, #00f3ff),
+          0 0 25px var(--white-color, #10171d);
+      }
+    }
+  }
+  .service_icon {
+    &:hover {
+      transform: scale(1.1);
+      transition: var(--transition);
+    }
+  }
+  .number {
+    color: var(--color1);
+  }
+}
+//}
+// Text Slider Section Start here
+
+// .tc_text_slider_section {
+// 	padding: 60px 0;
+// 	background: var(--black-color, #0b0f19);
+// 	overflow: hidden;
+// 	pointer-events: none; /* ক্লিক করলে স্লাইডার থামা বন্ধ রাখতে */
+// 	width: 100% !important; /* পুরো পেজ জুড়ে দেখানোর জন্য */
+
+// 	.mySwiper {
+// 		width: 100% !important; /* সম্পূর্ণ পেজের উইডথ গ্রহণ করার জন্য */
+// 		max-width: 100% !important;
+// 		// margin: 0 auto;
+
+// 		.swiper-wrapper {
+// 			/* সুইপারের ডিফল্ট ট্রানজিশনকে লিনিয়ার করার জন্য */
+// 			-webkit-transition-timing-function: linear !important;
+// 			-o-transition-timing-function: linear !important;
+// 			-moz-transition-timing-function: linear !important;
+// 			transition-timing-function: linear !important;
+// 		}
+// 	}
+
+// 	.swiper-slide {
+// 		/* স্লাইডারের ডিফল্ট জাভাস্ক্রিপ্ট উইডথকে সম্মান জানিয়ে ফিক্সড বা !important উইডথ বাদ দেওয়া হয়েছে */
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 		/* স্ক্রিন সাইজ ও জুমিং অনুযায়ী আইকন ও টেক্সটের মধ্যকার দূরত্ব স্বয়ংক্রিয়ভাবে কমবে-বাড়বে */
+// 		gap: clamp(8px, 1.2vw, 25px);
+
+// 		a {
+// 			display: flex;
+// 			align-items: center;
+// 			text-decoration: none;
+// 			justify-content: space-between;
+// 		}
+
+// 		img {
+// 			// display: block;
+// 			// /* রেসপনসিভ ইমেজ স্কেলিং */
+// 			// width: clamp(16px, 2.5vw, 50px);
+// 			// height: clamp(16px, 2.5vw, 50px);
+// 			// flex-shrink: 0;
+
+// 			display: flex;
+// 			align-items: center;
+
+// 			justify-content: space-between;
+// 			flex-shrink: 0;
+// 		}
+
+// 		.text_slider_content {
+// 			color: var(--white-color, #ffffff);
+// 			/* ডাইনামিক রেসপনসিভ ফন্ট সাইজ: জুম ইন/আউট করলে লেখার সাইজ নিজে থেকেই ঠিক হয়ে যাবে */
+// 			font-size: 80px;
+// 			font-weight: 700;
+// 			line-height: 1;
+// 			white-space: nowrap;
+// 		}
+// 	}
+// }
+
+// .tc_text_slider_section {
+// 	padding: 60px 0;
+// 	background: var(--black-color);
+
+// 	.swiper-wrapper {
+
+// 		.slider_content {
+// 			width: auto !important;
+// 			display: flex;
+// 			align-items: center;
+// 			justify-content: space-between;
+// 			gap: 50px;
+// 			flex-direction: row;
+
+// 			a {
+// 				display: flex;
+// 				align-items: center;
+// 				text-decoration: none;
+// 				justify-content: space-between;
+
+// 				img {
+// 					display: block;
+// 					height: 50px;
+// 					width: 50px;
+// 					// margin-top: 16px;
+// 				}
+// 			}
+// 			.text_slider_content {
+// 				color: var(--white-color);
+// 				//margin-left: 60px;
+// 				font-size: 60px;
+// 				font-weight: 700;
+// 				line-height: 120%;
+// 			}
+// 		}
+// 	}
+// 	.mySwiper .swiper-wrapper {
+// 		-webkit-transition-timing-function: linear !important;
+// 		-o-transition-timing-function: linear !important;
+// 		-moz-transition-timing-function: linear !important;
+// 		transition-timing-function: linear !important;
+// 	}
+// }
+// Text Slider Section Start here
+.tc_text_slider_section {
+  padding: 60px 0;
+  background: var(--black-color, #0b0f19);
+  overflow: hidden;
+  //pointer-events: none;
+  width: 100% !important;
+
+  .swiper-wrapper {
+    .slider_content {
+      width: auto !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 45px;
+      flex-direction: row;
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        justify-content: space-between;
+        transition: var(--transition);
+        &:hover {
+          transform: scale(1.1);
+        }
+        img {
+          display: block;
+          height: 50px;
+          width: 50px;
+        }
+      }
+      .text_slider_content {
+        color: var(--white-color, #ffffff);
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 120%;
+        white-space: nowrap; /* লেখা যেন ভেঙে লাইনের নিচে না যায় */
+        transition: var(--transition);
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .textMarqueeSwiper {
+    width: 100% !important;
+    max-width: 100% !important;
+    .swiper-wrapper {
+      -webkit-transition-timing-function: linear !important;
+      -o-transition-timing-function: linear !important;
+      -moz-transition-timing-function: linear !important;
+      transition-timing-function: linear !important;
+    }
+  }
+}
+
+// Home 2 Service Section start here
+.tc_feature_service_section_home2 {
+  border-top: 1px solid var(--border);
+  margin-top: 227px;
+  @media (max-width: 575.98px) {
+    padding: 0 25px;
+  }
+
+  .service_title {
+    @media (max-width: 575.98px) {
+      max-width: 360px;
+    }
+    h2 {
+      font-family: var(--font-grotesque);
+      @media (max-width: 991.98px) {
+        padding-left: 0px !important;
+      }
+    }
+    p {
+      max-width: 509px;
+    }
+  }
+
+  .service_item {
+    @media (max-width: 991.98px) {
+      margin-top: 50px;
+    }
+    .btn_normal {
+      font-weight: 400;
+    }
+    .service_card {
+      width: 680px;
+      border: 1px solid var(--border);
+      padding: 62px 51px;
+      background: var(--white-color);
+      @media (max-width: 1399.98px) {
+        max-width: 600px;
+      }
+      @media (max-width: 1199.98px) {
+        max-width: 500px;
+        padding: 40px 30px;
+        gap: 20px;
+      }
+      @media (max-width: 575.98px) {
+        max-width: 360px;
+        padding: 15px 10px;
+        gap: 20px;
+      }
+      @media (max-width: 375.98px) {
+        max-width: 300px;
+        padding: 15px 10px;
+        gap: 20px;
+      }
+
+      &:active {
+        border: 1px solid var(--black-color);
+      }
+      .service_content {
+        h3 {
+          font-family: var(--font-grotesque);
+        }
+        p {
+          max-width: 400px;
+          padding: 16px 0 36px 0;
+        }
+      }
+    }
+    .defaul_service_card {
+      border: 1px solid var(--black-color);
+    }
+  }
+  .row > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

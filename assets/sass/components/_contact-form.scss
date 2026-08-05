@@ -1,0 +1,167 @@
+/*=============================
+	24. Contact Form CSS Start
+===============================*/
+
+.tranzit-contact-form {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-right: 50px;
+  padding: 40px;
+  background: linear-gradient(133deg,
+      rgba(255, 255, 255, 0.1) -20.02%,
+      rgba(0, 0, 0, 0.1) 98.75%);
+  backdrop-filter: blur(6px);
+
+  @media (max-width: 1199.98px) {
+    margin-right: 0;
+    padding: 24px;
+  }
+
+  .input-group {
+
+    .form-control,
+    .form-select {
+      color: var(--bs-white-color);
+    }
+
+
+    .textarea-control {
+      color: var(--bs-white-color);
+    }
+  }
+
+  .total-price {
+    .price {
+      p {
+        color: var(--bs-primary-color);
+
+        span {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+
+  &.style2 {
+    padding: 0;
+    padding-top: 40px;
+    border: 0;
+    background: transparent;
+    backdrop-filter: none;
+
+    .input-group {
+      .form-control {
+        background: var(--bs-bg-color2);
+        color: var(--bs-black-color);
+      }
+
+      .icon {
+        i {
+          color: var(--bs-primary-color);
+        }
+      }
+
+      .textarea-control {
+        height: 141px;
+      }
+    }
+
+    .icon-textarea {
+      top: 20px;
+      transform: unset !important;
+    }
+
+    .theme-btn {
+      background: var(--bs-black-color);
+
+      &::before {
+        background: var(--bs-primary-color);
+      }
+    }
+  }
+
+  &.style3 {
+    background: var(--bs-bg-color2);
+
+    .input-group {
+
+      .form-control,
+      .form-select {
+        background: var(--bs-white-color);
+        color: var(--bs-black-color);
+      }
+
+      .icon {
+        i {
+          color: var(--bs-primary-color);
+        }
+      }
+
+      .textarea-control {
+        height: 171px;
+        color: var(--bs-black-color);
+      }
+    }
+
+    .input-group {
+      .form-select {
+        background: var(--bs-white-color);
+      }
+    }
+
+    .icon-textarea {
+      top: 20px;
+    }
+  }
+
+  &.style4 {
+    background: var(--bs-primary-color);
+
+    .input-group {
+
+      .form-control,
+      .form-select {
+        background: var(--bs-white-color);
+        color: var(--bs-black-color);
+      }
+
+      .icon {
+        i {
+          color: var(--bs-primary-color);
+        }
+      }
+
+      .textarea-control {
+        height: 171px;
+        color: var(--bs-black-color);
+      }
+    }
+
+    .icon-textarea {
+      top: 20px;
+    }
+
+    input[type="range"].slider {
+      --track-background: linear-gradient(#001F3F, #001F3F);
+    }
+
+    input[type="range"].slider::-webkit-slider-thumb {
+      background: var(--bs-black-color);
+    }
+
+    input[type="range"].slider::-moz-range-thumb {
+      background: var(--bs-black-color);
+    }
+
+    .total-price {
+      .price {
+        p {
+          color: var(--bs-white-color);
+        }
+      }
+    }
+
+    .theme-btn {
+      background: var(--bs-black-color);
+    }
+  }
+}

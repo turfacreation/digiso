@@ -1,0 +1,71 @@
+/*=============================
+	38. Contact Us Page CSS Start
+===============================*/
+.ep-contact-section {
+	.contact-info {
+		.info-item {
+			border: 1px solid var(--bs-border);
+			padding: 30px 47px 30px 30px;
+			transition: var(--bs-transition);
+
+			.text {
+				p {
+					a {
+						color: var(--bs-paragraph-color);
+
+						&:hover {
+							color: var(--bs-primary-color);
+						}
+					}
+				}
+			}
+
+			.icon {
+				width: 70px;
+				height: 70px;
+				border-radius: 16px;
+				background: var(--bs-color2);
+				font-size: 30px;
+				color: var(--bs-primary-color);
+			}
+
+			&:hover {
+				border-color: var(--bs-primary-color);
+			}
+		}
+	}
+
+	.contact-img {
+		width: 700px;
+		margin-left: -52px;
+
+		@media (max-width:991.98px) {
+			width: 100%;
+			margin-left: 0;
+			margin-top: 30px;
+		}
+	}
+}
+
+.ajax-response.error {
+	margin-top: 30px;
+	color: red;
+	font-size: 14px;
+	font-weight: 500;
+	background-color: rgba(255, 0, 0, 0.1);
+	border: 1px solid rgba(255, 0, 0, 0.5);
+	border-radius: 8px;
+	padding: 10px 20px;
+}
+
+.ajax-response.success {
+	margin-top: 30px;
+	color: green;
+	background-color: rgba(0, 128, 0, 0.1);
+	border: 1px solid rgba(0, 128, 0, 0.5);
+	font-weight: 500;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 8px;
+	padding: 10px 20px;
+}

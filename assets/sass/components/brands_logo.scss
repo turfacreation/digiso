@@ -1,0 +1,26 @@
+/*=============================
+	09. Brands Logo CSS Start
+===============================*/
+.tc_brands_logo_section {
+	padding: 60px 0;
+	transform: rotate(-2deg);
+	border-bottom: 2px solid var(--border);
+	margin-top: -27px;
+
+	.swiper-slide{
+		display: flex;
+		justify-content: center;
+		a{
+			&:hover{
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	.mySwiper .swiper-wrapper {
+		-webkit-transition-timing-function: linear !important;
+		-o-transition-timing-function: linear !important;
+		-moz-transition-timing-function: linear !important;
+		transition-timing-function: linear !important;
+	}
+}

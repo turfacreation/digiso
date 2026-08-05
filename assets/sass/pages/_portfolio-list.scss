@@ -1,0 +1,118 @@
+/*===============================
+	34. Portfolio List Page CSS Start
+=================================*/
+.ep-portfolio-list-section {
+  margin-bottom: -24px;
+
+  .portfolio-menu {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+
+      @media (max-width:1199.98px) {
+        justify-content: flex-start;
+      }
+      li {
+        button {
+          color: var(--bs-black-color);
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 24px;
+          text-transform: uppercase;
+          padding: 12px 30px;
+          border: 1px solid var(--bs-black-color);
+          border-radius: 50px;
+          background: transparent;
+
+          &.active {
+            background: var(--bs-primary-color);
+            color: var(--bs-white-color);
+            border-color: var(--bs-primary-color);
+          }
+
+          &:hover {
+            background: var(--bs-primary-color);
+            color: var(--bs-white-color);
+            border-color: var(--bs-primary-color);
+          }
+        }
+      }
+    }
+  }
+
+  .fade {
+    transition: var(--bs-transition);
+  }
+
+  .portfolio-main {
+    columns: 3 410px;
+    gap: 24px;
+
+    @media (max-width:1399.98px) {
+      columns: 3 356px;
+    }
+
+    @media (max-width:991.98px) {
+      columns: 3 300px;
+    }
+
+    .portfolio-item {
+      transition: var(--bs-transition);
+      margin-bottom: 24px;
+
+      .overlay {
+        background-color: rgba(0, 31, 63, 0.8);
+        border-radius: 12px;
+        padding: 30px;
+        opacity: 0;
+        transition: var(--bs-transition);
+
+        @media (max-width:1399.98px) {
+          padding: 12px;
+        }
+
+        @media (max-width:1199.98px) {
+          padding: 30px;
+        }
+
+        @media (max-width:575.98px) {
+          padding: 20px;
+        }
+
+        .text-wrapper {
+          padding-right: 30px;
+
+          .text-object {
+            background: url("../img/shape/protfolio-shape.svg");
+            padding: 12px 25px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 245px;
+
+            p {
+              color: var(--bs-primary-color);
+            }
+          }
+        }
+      }
+
+      .icon {
+        width: 50px;
+        height: 50px;
+        background-color: var(--bs-primary-color);
+        border-radius: 50%;
+        top: 7px;
+        right: 19px;
+      }
+
+      &:hover {
+        .overlay {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

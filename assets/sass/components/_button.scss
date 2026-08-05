@@ -1,0 +1,244 @@
+/*=============================
+	05. Theme btn CSS Start
+===============================*/
+/*.btn_normal{
+  font-weight: 500;
+}*/
+
+// This is Home 2 Banner button style
+.btn_rounded_home2 {
+	display: inline-flex;
+	align-items: center;
+	font-family: var(--font-sora);
+
+	.btn_text {
+		background-color: var(--black-color);
+		color: var(--white-color);
+		font-size: 18px;
+		font-weight: 500;
+		padding: 24px 46px 24px 46px;
+		border-radius: 50px;
+		z-index: 1;
+		transition: var(--transition);
+	}
+	.btn_icon {
+		background-color: var(--primary-color);
+		color: var(--black-color);
+		width: 75px;
+		height: 75px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 24px;
+		margin-left: -15px;
+		z-index: 2;
+		transition: var(--transition);
+	}
+	&:hover {
+		.btn_text {
+			background: var(--primary-color);
+			color: var(--black-color);
+		}
+
+		.btn_icon {
+			background: var(--black-color);
+			color: var(--white-color);
+		}
+	}
+	&.btn_blog_cta {
+		.btn_text {
+			background: var(--white-color);
+			color: var(--black-color);
+			transition: var(--transition);
+		}
+		.btn_icon {
+			background: var(--primary-color);
+			color: var(--black-color);
+			transition: var(--transition);
+		}
+		&:hover {
+			.btn_text {
+				background: var(--primary-color);
+				color: var(--balack-color);
+			}
+
+			.btn_icon {
+				background: var(--white-color);
+				color: var(--black-color);
+			}
+		}
+	}
+}
+
+// This is footer btn style
+.btn_rounded_black {
+	display: inline-flex;
+	align-items: center;
+	font-family: var(--font-sora);
+
+	.btn_text {
+		background-color: var(--black-color);
+		color: var(--white-color);
+		font-size: 18px;
+		font-weight: 500;
+		padding: 24px 46px 24px 46px;
+		border-radius: 50px;
+		z-index: 1;
+		transition: var(--transition);
+	}
+	.btn_icon {
+		background-color: var(--primary-color);
+		color: var(--black-color);
+		width: 75px;
+		height: 75px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 24px;
+		margin-left: -35px;
+		z-index: 2;
+		transition: var(--transition);
+	}
+	&:hover {
+		.btn_text {
+			background: var(--primary-color);
+			color: var(--black-color);
+		}
+
+		.btn_icon {
+			background: var(--black-color);
+			color: var(--white-color);
+		}
+	}
+}
+//btn_stylish_white_border start
+.btn_stylish_white_border {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #f1f2f5;
+	text-decoration: none;
+	padding-bottom: 6px;
+	transition: color 0.3s ease;
+
+	span {
+		display: inline-flex;
+		align-items: center;
+		transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+		img,
+		svg {
+			width: 14px;
+			height: 14px;
+			object-fit: contain;
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 0;
+		height: 2px;
+		background-color: #f3f3f1;
+		transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+	}
+
+	&:hover {
+		color: #faf7f7;
+
+		&::after {
+			width: 100%;
+		}
+
+		// span {
+		// 	transform: translate(3px, -3px);
+		// }
+	}
+}
+//btn_stylish_white_border end
+// .btn_normal stylish start
+.btn_normal {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #12151c;
+	text-decoration: none;
+	padding-bottom: 6px;
+	transition: color 0.3s ease;
+
+	span {
+		display: inline-flex;
+		align-items: center;
+		transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+		img,
+		svg {
+			width: 14px;
+			height: 14px;
+			object-fit: contain;
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 0;
+		height: 2px;
+		background-color: #20201f;
+		transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+	}
+
+	// হোভার ইফেক্ট
+	&:hover {
+		color: #201f1f;
+
+		&::after {
+			width: 100%;
+		}
+
+		// span {
+		// 	transform: translate(3px, -3px);
+		// }
+	}
+	&.btn_normal_white {
+		color: #ffffff;
+		&::after {
+			background-color: #ffffff;
+		}
+	}
+
+	&.btn_normal_font {
+		font-size: 16px !important;
+		font-weight: 400 !important;
+	}
+	&.btn_normal_footer_menu{
+		color: var(--paragraph-color);
+		font-weight: 400;
+		text-transform: capitalize;
+	}
+}
+// .btn_normal stylish end
+
+.btn_rounded {
+	border: 1px solid var(--border);
+	width: 150px;
+	height: 150px;
+	span {
+		margin-top: 5px;
+	}
+	&:hover {
+		background: var(--primary-color);
+	}
+}

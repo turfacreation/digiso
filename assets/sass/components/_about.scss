@@ -1,0 +1,278 @@
+/*=============================
+	16. About CSS Start
+===============================*/
+
+/*===============================
+About Section Home 2
+===============================*/
+.tc_about_section_home_2 {
+	padding: 78px 0 0 0;
+	height: 768px;
+	width: 100%;
+	@media (max-width: 575.98px) {
+		padding: 50px 20px;
+	}
+	.about_headings {
+		h2 {
+			max-width: 813px;
+			font-family: var(--font-grotesque);
+		}
+		p {
+			max-width: 809px;
+		}
+	}
+
+	// ----------Brand Logo Carousel Wrapper ----------
+	.logo-carousel-wrapper {
+		width: 100%;
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			width: 150px;
+			height: 100%;
+			z-index: 2;
+			pointer-events: none;
+		}
+
+		&::before {
+			left: 0;
+			background: linear-gradient(
+				to right,
+				#f9fbfd 0%,
+				rgba(249, 251, 253, 0) 100%
+			);
+		}
+
+		&::after {
+			right: 0;
+			background: linear-gradient(
+				to left,
+				#f9fbfd 0%,
+				rgba(249, 251, 253, 0) 100%
+			);
+		}
+	}
+
+	.logo-swiper {
+		width: 100%;
+		overflow: hidden;
+		padding: 10px 0;
+
+		.swiper-wrapper {
+			transition-timing-function: linear !important;
+			-webkit-transition-timing-function: linear !important;
+		}
+	}
+
+	.logo-slide {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 18px 10px;
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+			filter: grayscale(100%);
+			opacity: 0.7;
+			transition: var(--transition);
+		}
+
+		&:hover img {
+			filter: grayscale(0%);
+			opacity: 1;
+			transform: scale(1.05);
+		}
+	}
+
+	// Video part
+
+	.video_part {
+		background: url(../images/home_2/about/video_bg.png) center center no-repeat;
+		background-size: cover;
+		padding: 142px 0px;
+		border-radius: 0px 30px 0px 30px;
+		.video_btn {
+			width: 172px;
+			height: 172px;
+			background: rgba(134, 133, 133, 0.47);
+			position: absolute;
+			border: 1px solid #afadad;
+			.video {
+				width: 98px;
+				height: 98px;
+				background: var(--white-color);
+				transition: var(--transition);
+
+				&:hover {
+					transform: scale(1.05);
+					background: var(--primary-color);
+				}
+				svg {
+					transition: var(--transition);
+					&:hover {
+						fill: var(--white-color);
+					}
+				}
+			}
+		}
+	}
+	.row > * {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/* About section one */
+// .ep-about-section {
+//   .about-img {
+//     padding-right: 110px;
+
+//     @media (max-width:1199.98px) {
+//       padding-right: 70px;
+//     }
+
+//     .shape {
+//       right: 50px;
+//       top: 54px;
+
+//       @media (max-width:1199.98px) {
+//         right: 10px;
+//       }
+
+//       @media (max-width:575.98px) {
+//         top: 20px;
+//       }
+
+//       .experiance {
+//         top: 18px;
+//         left: 36px;
+//       }
+//     }
+
+//     .video-part {
+//       width: 234px;
+//       height: 183px;
+//       bottom: 44px;
+//       right: 48px;
+//       border: 3px solid var(--bs-white-color);
+
+//       @media (max-width:1199.98px) {
+//         right: 0;
+//       }
+
+//       @media (max-width:575.98px) {
+//         bottom: -15px;
+//         width: 203px;
+//         height: 155px;
+//       }
+
+//       .overlay {
+//         background-color: rgba(0, 31, 63, 0.7);
+//       }
+//     }
+//   }
+
+//   .about-content {
+//     .tracking-info {
+//       border-bottom: 1px solid var(--bs-border);
+
+//       .title {
+//         @media (max-width:1399.98px) {
+//           font-size: 20px;
+//         }
+//       }
+
+//       .support {
+//         &::before {
+//           position: absolute;
+//           top: 50%;
+//           transform: translateY(-50%);
+//           left: 40px;
+//           width: 1px;
+//           height: 40px;
+//           background: var(--bs-border);
+//           content: "";
+
+//           @media (max-width:767.98px) {
+//             display: none;
+//           }
+//         }
+//       }
+//     }
+
+//     .about-text {
+//       border-left: 10px solid var(--bs-primary-color);
+//       border-radius: 10px;
+//     }
+
+//     .tracking .icon,
+//     .support .icon {
+//       width: 56px;
+//       height: 56px;
+//       background-color: var(--bs-color2);
+
+//       img {
+//         width: 30px;
+//       }
+//     }
+//   }
+// }
+
+/* About section two */
+// .ep-about-section-two {
+//   .about-images {
+//     padding-right: 30px;
+//   }
+
+//   .experiance-shape {
+//     right: -60px;
+//     top: 250px;
+
+//     @media (max-width:991.98px) {
+//       right: 0;
+//       bottom: 50px;
+//       top: unset;
+//     }
+
+//     .exp-text {
+//       background: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="197" height="105" viewBox="0 0 197 105" fill="none"%3E%3Cpath d="M0 10C0 4.47715 4.47715 0 10 0H98.5H147.75H163.912C169.322 0 174.501 2.19163 178.268 6.07484L184.5 12.5L191.799 20.5287C195.146 24.2101 197 29.0068 197 33.9821V52.5V95C197 100.523 192.523 105 187 105H10C4.47715 105 0 100.523 0 95V10Z" fill="%23E10006"/%3E%3C/svg%3E');
+//       background-repeat: no-repeat;
+//       background-size: cover;
+//       padding: 22px 0;
+//       max-width: 197px;
+//     }
+//   }
+
+//   .arrow-up-right {
+//     position: absolute;
+//     top: 122px;
+//     right: -100px;
+//     @media (max-width:991.98px) {
+//       display: none;
+//     }
+//   }
+
+//   .about-text {
+//     .progress-content{
+//       padding-right: 40px;
+//       .progress-title{
+//         @media (max-width:1399.98px) {
+//           font-size: 18px;
+//           line-height: 24px;
+//         }
+//         @media (max-width:991.98px) {
+//           font-size: 20px;
+//           line-height: 30px;
+//         }
+//       }
+//     }
+//     .btn-wrapper {
+//       border-top: 1px solid var(--bs-border);
+//     }
+//   }
+// }

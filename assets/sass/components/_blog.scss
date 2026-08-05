@@ -1,0 +1,539 @@
+/*=============================
+	26. Blog CSS Start
+===============================*/
+// .tc_blog_section {
+// 	.container {
+// 		.blog_main {
+// 			background: var(--white-color);
+// 			.blog_item {
+// 				position: relative;
+// 				.blog_card {
+// 					padding: 44px 0;
+// 					border: 1px solid #e5e7eb;
+// 					position: relative;
+// 					cursor: pointer;
+// 					justify-content: space-between;
+// 					height: 220px;
+
+// 					.blog_image {
+// 						position: absolute;
+// 						top: 50%;
+// 						left: 18%;
+// 						transform: translateY(-49%) rotate(6deg);
+// 						z-index: 10;
+// 						pointer-events: none;
+// 						opacity: 0;
+// 						transition: opacity 0.3s ease;
+
+// 						img {
+// 							width: 265px;
+// 							height: 300px;
+// 						}
+// 					}
+
+// 					&.blog-trigger:hover .blog_image {
+// 						opacity: 1 !important;
+// 					}
+
+// 					&.blog_default_card .blog_fixed_image {
+// 						opacity: 1 !important;
+// 					}
+// 				}
+
+// 				&:has(.blog-trigger:hover) {
+// 					.blog_fixed_image {
+// 						opacity: 0 !important;
+// 					}
+// 				}
+
+// 				.blog_heading {
+// 					max-width: 650px;
+// 					font-size: 32px;
+// 					line-height: 135%;
+// 				}
+// 				.btn_normal {
+// 					font-size: 16px !important;
+// 					font-weight: 400 !important;
+// 				}
+// 			}
+// 			.row {
+// 				margin: 0;
+// 			}
+// 		}
+// 	}
+// }
+
+// .tc_blog_section {
+// 	.container {
+// 		.blog_main {
+// 			background: var(--white-color);
+// 			.blog_item {
+// 				position: relative;
+// 				.blog_card {
+// 					padding: 44px 0;
+// 					border: 1px solid var(--border);
+// 					position: relative;
+// 					cursor: pointer;
+// 					justify-content: space-between;
+// 					height: 220px;
+
+// 					.blog_image {
+// 						position: absolute;
+// 						top: 50%;
+// 						left: 18%;
+// 						transform: translateY(-49%) rotate(6deg);
+// 						z-index: 10;
+// 						pointer-events: none;
+// 						opacity: 0;
+// 						transition: opacity 0.3s ease;
+// 						&::before{
+// 							content: '';
+// 							position: absolute;
+// 							inset: 0;
+// 							/* Rectangle 47.png image path */
+// 							background: url('../images/blog/Rectangle47.png') no-repeat center / contain;
+// 							/* SVG fallback gradient frame for live preview */
+// 							// background-image: url("data:image/svg+xml,%3Csvg width='260' height='300' viewBox='0 0 260 300' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 13 L235 3 L198 288 L8 258 Z' stroke='url(%23grad)' stroke-width='3.5' fill='none'/%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ff9966' /%3E%3Cstop offset='50%25' stop-color='%23ff5e62' /%3E%3Cstop offset='100%25' stop-color='%2338ef7d' /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+// 							z-index: 2;
+// 							pointer-events: none;
+// 						}
+
+// 						img {
+// 							// width: 265px;
+// 							// height: 300px;
+// 							position: absolute;
+// 							top: 50%;
+// 							left: 50%;
+// 							width: 79%;
+// 							height: 81%;
+// 							object-fit: cover; /* অটোমেটিক যেকোনো ছবিকে ক্রপ করে ফ্রেমে বসিয়ে দেবে */
+// 							transform: translate(-50%, -50%) rotate(6.2deg);
+// 							border-radius: 4px;
+// 							z-index: 1;
+// 						}
+// 					}
+
+// 					&.blog-trigger:hover .blog_image {
+// 						opacity: 1 !important;
+// 					}
+
+// 					&.blog_default_card .blog_fixed_image {
+// 						opacity: 1 !important;
+// 					}
+// 				}
+
+// 				&:has(.blog-trigger:hover) {
+// 					.blog_fixed_image {
+// 						opacity: 0 !important;
+// 					}
+// 				}
+
+// 				.blog_heading {
+// 					max-width: 650px;
+// 					font-size: 32px;
+// 					line-height: 135%;
+// 				}
+// 				.btn_normal {
+// 					font-size: 16px !important;
+// 					font-weight: 400 !important;
+// 				}
+// 			}
+// 			.row {
+// 				margin: 0;
+// 			}
+// 		}
+// 	}
+// }
+
+/* 1. Main Image Box Container (Fixed Dimensions) */
+// .tc_blog_section{
+// .container {
+// 	.blog_main {
+// 		background: var(--white-color);
+// 		.blog_item{
+// 			position: relative;
+// 			.blog_card{
+// 					padding: 44px 0;
+// 					border: 1px solid var(--border);
+// 					position: relative;
+// 					cursor: pointer;
+// 					justify-content: space-between;
+// 					height: 220px;
+
+// 					  .blog_image {
+// 						position: absolute;
+// 						left: 18%;
+// 						top: 50%;
+// 						transform: translateY(-50%);
+// 						width: 260px;
+// 						height: 300px;
+// 						opacity: 0;
+// 						pointer-events: none;
+// 						transition: opacity 0.35s ease, transform 0.35s ease;
+// 						z-index: 10;
+// 						&::before {
+// 							content: '';
+// 							position: absolute;
+// 							inset: 0;
+// 							background: url('../images/blog/Rectangle47.png') no-repeat center / contain;
+// 							z-index: 2;
+// 							transform: rotate(7.2deg);
+//         					}
+// 							   .blog_image img {
+// 									position: absolute;
+// 									top: 50%;
+// 									left: 50%;
+// 									width: 98%;
+// 									height: 93%;
+// 									object-fit: cover; /* অটোমেটিক যেকোনো ছবিকে ক্রপ করে ফ্রেমে বসিয়ে দেবে */
+// 									transform: translate(-50%, -50%) rotate(7.2deg);
+// 									//border-radius: 4px;
+// 									z-index: 1;
+// 								}
+//         }
+// 			}
+// 		 .blog_card:hover .blog_image {
+//             opacity: 1;
+//             transform: translateY(-50%) scale(1.03);
+//         }
+
+//         /* 5. Default Card (Shown initially) */
+//         .blog_card.blog_default_card .blog_image {
+//             opacity: 1;
+//         }
+
+//         /* 6. Hide Default Active image when ANY card is hovered */
+//         .blog_main:has(.blog_card:hover) .blog_default_card:not(:hover) .blog_image {
+//             opacity: 0 !important;
+//         }
+
+// 		.row{
+// 			margin: 0;
+// 		}
+
+// 		.blog_heading {
+//  					max-width: 650px;
+// 					font-size: 32px;
+//  					line-height: 135%;
+// 				}
+
+// 				.btn_normal {
+// 					font-size: 16px !important;
+// 					font-weight: 400 !important;
+// 				}
+// 		}
+// 	}
+// }
+// }
+
+//-----------------------------------------------------------------------------
+// //  .blog_item {
+// // 				position: relative;
+// // 					 }
+// 				// .blog_card {
+// 				// 	padding: 44px 0;
+// 				// 	border: 1px solid var(--border);
+// 				// 	position: relative;
+// 				// 	cursor: pointer;
+// 				// 	justify-content: space-between;
+// 				// 	height: 220px;
+// 				// }
+//         .blog_image {
+//             position: absolute;
+//             left: 18%;
+//             top: 50%;
+//             transform: translateY(-50%);
+//             width: 260px;
+//             height: 300px;
+//             opacity: 0;
+//             pointer-events: none;
+//             transition: opacity 0.35s ease, transform 0.35s ease;
+//             z-index: 10;
+//         }
+
+//         /* 2. PNG Gradient Border Frame using ::before (Rectangle 47.png) */
+//         .blog_image::before {
+//             content: '';
+//             position: absolute;
+//             inset: 0;
+//             background: url('../images/blog/Rectangle47.png') no-repeat center / contain;
+//             z-index: 2;
+//             transform: rotate(7.2deg);
+//         }
+
+//         /* 3. Auto-Adjusting Inner Image (Fits ANY photo perfectly inside the frame) */
+//         .blog_image img {
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             width: 98%;
+//             height: 93%;
+//             object-fit: cover; /* অটোমেটিক যেকোনো ছবিকে ক্রপ করে ফ্রেমে বসিয়ে দেবে */
+//             transform: translate(-50%, -50%) rotate(7.2deg);
+//             //border-radius: 4px;
+//             z-index: 1;
+//         }
+
+//         /* 4. Hover Trigger (Show image on hover) */
+//         .blog_card:hover .blog_image {
+//             opacity: 1;
+//             transform: translateY(-50%) scale(1.03);
+//         }
+
+//         /* 5. Default Card (Shown initially) */
+//         .blog_card.blog_default_card .blog_image {
+//             opacity: 1;
+//         }
+
+//         /* 6. Hide Default Active image when ANY card is hovered */
+//         .blog_main:has(.blog_card:hover) .blog_default_card:not(:hover) .blog_image {
+//             opacity: 0 !important;
+//         }
+
+// 		.row{
+// 			margin: 0;
+// 		}
+
+// 		.blog_heading {
+//  					max-width: 650px;
+// 					font-size: 32px;
+//  					line-height: 135%;
+// 				}
+
+// 				.btn_normal {
+// 					font-size: 16px !important;
+// 					font-weight: 400 !important;
+// 				}
+
+//----------------------------------------------------------
+// .ep-blog-section {
+//   .blog-item {
+//     box-shadow: var(--bs-shadow);
+//     transition: var(--bs-transition);
+
+//     .news-date {
+//       top: -33px;
+//       right: -38px;
+
+//       .date {
+//         top: 41px;
+//         right: 44px;
+
+//         .date {
+//           color: var(--bs-white-color);
+//           line-height: 30px;
+//         }
+
+//         p {
+//           color: var(--bs-white-color);
+//           font-size: 12px;
+//         }
+//       }
+
+//     }
+
+//     .blog-text {
+//       padding: 40px;
+
+//       @media (max-width:1199.98px) {
+//         padding: 20px;
+//       }
+
+//       .blog-title {
+//         a {
+//           &:hover {
+//             color: var(--bs-primary-color);
+//           }
+//         }
+//       }
+//     }
+
+//     &:hover {
+//       box-shadow: var(--bs-shadow2);
+//     }
+
+//     .blog-meta {
+//       i {
+//         color: var(--bs-primary-color);
+//       }
+//     }
+//   }
+
+//   &.style2 {
+//     .blog-item {
+//       box-shadow: none;
+//       background: var(--bs-bg-color1);
+
+//       .blog-img {
+//         padding: 20px;
+//         padding-bottom: 0;
+
+//         .news-date {
+//           top: -33px;
+//           right: -26px;
+//         }
+//       }
+
+//       &:hover {
+//         background: var(--bs-white-color);
+//         box-shadow: var(--bs-shadow);
+//       }
+//     }
+//   }
+// }
+.tc_blog_section {
+	@media (max-width: 575.98px) {
+		padding: 20px 20px;
+	}
+	.container {
+		.blog_main {
+			background: var(--white-color);
+			.blog_item {
+				position: relative;
+				.blog_card {
+					padding: 44px 0;
+					border: 1px solid var(--border);
+					position: relative;
+					justify-content: space-between;
+					min-height: 200px;
+					height: auto;
+					.blog_heading {
+						max-width: 650px;
+						font-size: 32px;
+						line-height: 135%;
+						@media (max-width: 991.98px) {
+							max-width: 450px;
+							font-size: 25px;
+						}
+					}
+					.blog_heading_last {
+						@media (max-width: 1199.98px) {
+							margin-bottom: 20px;
+						}
+					}
+
+					.blog_image {
+						position: absolute;
+						left: 18%;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 260px;
+						height: 300px;
+						opacity: 0;
+						transition:
+							opacity 0.35s ease,
+							transform 0.35s ease;
+						z-index: 10;
+						@media (max-width: 1199.98px) {
+							left: 13%;
+						}
+						@media (max-width: 991.98px) {
+							left: 65%;
+						}
+						@media (max-width: 767.98px) {
+							display: none;
+						}
+
+						&::before {
+							content: "";
+							position: absolute;
+							inset: 0;
+							background: url("../images/blog/gradient_frame.png") no-repeat
+								center / contain;
+							z-index: 2;
+							transform: rotate(7deg);
+						}
+
+						img {
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							width: 79%;
+							height: 81%;
+							transform: translate(-50%, -50%) rotate(-6.7deg);
+							z-index: 1;
+						}
+					}
+
+					&:hover {
+						.blog_image {
+							opacity: 1;
+							transform: translateY(-50%) scale(1.03);
+						}
+					}
+
+					&.blog_default_card {
+						.blog_image {
+							opacity: 1;
+						}
+					}
+				}
+				.heading_link {
+					@media (max-width: 991.98px) {
+						padding-left: 0;
+					}
+				}
+			}
+
+			.row {
+				margin: 0 auto;
+			}
+		}
+		&:has(.blog_card:hover) {
+			.blog_default_card:not(:hover) .blog_image {
+				opacity: 0 !important;
+			}
+		}
+	}
+}
+
+/*===================================
+  Blog section home 2
+  =================================== */
+.tc_blog_home2_section {
+	//height:1067px;
+	.section_title {
+		.title {
+			text-transform: capitalize;
+		}
+		.section_title_content {
+			max-width: 519px;
+		}
+	}
+	.blog_main_home_2 {
+		.blog_item_home_2 {
+			.blog_card_home_2 {
+				padding: 18px;
+				background: var(--white-color);
+				h4 {
+					max-width: 310px;
+				}
+				.blog_card_line {
+					width: 70%;
+					height: 1px;
+					background: var(--black-color);
+					margin-top: 12px;
+
+					// img {
+					// 	width: 215px;
+					// 	height: 1px;
+					// }
+				}
+			}
+		}
+	}
+	.blog_cta_main {
+		border-radius: 30px 0px 30px 0px;
+		.blog_cta_content {
+			padding: 73px 95px;
+			h3 {
+				max-width: 503px;
+				color: var(--white-color);
+			}
+			p {
+				max-width: 331px;
+				color: var(--color2);
+			}
+		}
+	}
+}

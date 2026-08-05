@@ -1,0 +1,113 @@
+/*=============================
+	30. CTA CSS Start
+===============================*/
+
+.ep-cta-section {
+  padding: 0 24px;
+
+  @media (max-width:575.98px) {
+    padding: 0;
+  }
+
+  .cta-bg {
+    padding-top: 134px;
+    margin-top: -54px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    overflow: hidden;
+
+  }
+}
+
+.fill-animate {
+  stroke-dasharray: 4500;
+  stroke-dashoffset: 4500;
+  animation: draw 15s linear infinite;
+  stroke-width: 1;
+  fill: none;
+}
+
+.ep-cta-section-two {
+  padding-top: 200px;
+
+  @media (max-width:991.98px) {
+    padding-top: 120px;
+  }
+
+  .cta-main {
+    background: var(--bs-primary-color);
+    position: relative;
+    z-index: 9;
+
+    @media (max-width:991.98px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .text {
+      max-width: 566px;
+      padding: 76px;
+      padding-right: 0;
+
+      @media (max-width:991.98px) {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 40px;
+      }
+
+      .title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 46px;
+
+        @media (max-width:575.98px) {
+          font-size: 30px;
+          line-height: 40px;
+        }
+      }
+    }
+
+    .img {
+      position: absolute;
+      top: -80px;
+      left: 613px;
+
+      @media (max-width:991.98px) {
+        position: static;
+      }
+    }
+
+    .img-two {
+      max-width: 546px;
+      clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
+      height: 277px;
+      position: absolute;
+      right: 130px;
+      z-index: -1;
+
+      @media (max-width:1199.98px) {
+        display: none;
+      }
+
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+
+    .play-btn {
+      position: absolute;
+      width: 53px;
+      height: 53px;
+      background: var(--bs-black-color);
+      right: 190px;
+      font-size: 18px;
+
+      @media (max-width:991.98px) {
+        left: 50%;
+        right: unset;
+        transform: translateX(-50%) !important;
+      }
+    }
+  }
+}

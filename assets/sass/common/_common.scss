@@ -1,0 +1,179 @@
+/*
+  Theme Name: Digiso - Best Agency HTML Template
+  Support: nahidraj.web@gmail.com
+  Description: Digiso - Best Agency HTML Template
+  Version: 1.0
+*/
+
+/* TABLE OF CONTENT
+============================
+
+*** Template Components ***
+============================
+01. Variable CSS
+02. Common CSS
+03. Section title CSS
+04. Heading CSS
+05. Theme btn CSS
+06. Background CSS
+07. Rounded CSS
+08. Spacing CSS
+09. Animation CSS
+10. Icon box CSS
+11. Form fields CSS
+12. Header CSS
+13. Offcanvas CSS
+14. Banner CSS
+15. Services CSS
+16. About Us CSS
+17. Work Process CSS
+18. Team CSS
+19. Client CSS
+20. Testimonial CSS
+21. FAQ CSS
+22. Counter CSS
+23. Why choose us CSS
+24. Contact Form CSS
+25. Price CSS
+26. Blog CSS
+27. Location CSS
+28. Footer CSS
+29. Page Header CSS
+30. CTA CSS
+31. Pagination CSS
+
+*** Template Pages ***
+=========================
+32. Service details Page CSS
+33. Team Details Page CSS
+34. Portfolio List Page CSS
+35. Portfolio Details Page CSS
+36. Blog List Page CSS
+37. Blog Details Page CSS
+38. Contact Us Page CSS
+39. Error Page CSS
+============================
+*/
+
+/*=============================
+	1. Google Fonts
+===============================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+/*=============================
+	01. Variable CSS start
+===============================*/
+
+:root {
+  --font-grotesque: "Bricolage Grotesque", sans-serif;
+  --font-sora: "Sora", sans-serif;
+  --primary-color: #d6ffc8;
+  --black-color: #10171d;
+  --white-color: #ffffff;
+  --paragraph-color: #666666;
+  --bg-color1: #fbfbfb;
+  --bg-color2: #f8f8f8;
+  --color1: #ababab;
+  --color2: #CECECE;
+  // --color3: #F7F7F7;
+  // --color4: #FEBE42;
+  --border: #e8e8e8;
+  --body-font-size: 16px;
+  --body-font-weight: 400;
+  --body-line-height: 160%;
+  // --shadow: 0px 5px 60px 0px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s ease-out 0s;
+
+  // Breakpoints (max-width, matches Bootstrap's scale but expressed as max-width)
+  --bp-sm: 575.98px;
+  --bp-md: 767.98px;
+  --bp-lg: 991.98px;
+  --bp-xl: 1199.98px;
+  --bp-xxl: 1399.98px;
+}
+
+/*=============================
+	02. Common CSS start
+===============================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sora);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  color: var(--black-color);
+  overflow-x: hidden;
+}
+
+a,
+button {
+  color: var(--black-color);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+a,
+span,
+small {
+  display: inline-block;
+}
+
+a:focus,
+button:focus {
+  text-decoration: none;
+  outline: none;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-grotesque);
+  color: var(--black-color);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: var(--paragraph-color);
+  margin: 0;
+  padding: 0;
+}
+
+*::-moz-selection {
+  background: var(--primary-color);
+  color: var(--black-color);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: var(--primary-color);
+  color: var(--black-color);
+  text-shadow: none;
+}
+
+::selection {
+  background: var(--primary-color);
+  color: var(--black-color);
+  text-shadow: none;
+}

@@ -1,0 +1,141 @@
+/*=============================
+	25. Price CSS Start
+===============================*/
+
+.ep-price-section {
+  .price-body {
+    padding: 80px;
+
+    @media (max-width:1399.98px) {
+      padding: 40px;
+    }
+
+    @media (max-width:1399.98px) {
+      padding: 20px;
+    }
+
+    .nav-pills {
+      margin-right: 60px;
+
+      @media (max-width: 1399px) {
+        margin-right: 40px;
+      }
+
+      @media (max-width: 1199.98px) {
+        margin-right: 0;
+      }
+    }
+
+    .nav-link {
+      background-color: var(--bs-bg-color1);
+      border: 1px solid var(--bs-border);
+      border-radius: 12px;
+      padding: 20px;
+      gap: 20px;
+
+      @media (max-width:575.98px) {
+        flex-direction: column;
+      }
+
+      .plan-price {
+        color: var(--bs-primary-color);
+
+        span {
+          color: var(--bs-paragraph-color) !important;
+          font-weight: 400 !important;
+        }
+      }
+
+      .plan-name {
+        color: var(--bs-black-color);
+      }
+
+      .feature-name {
+        border-radius: 100px;
+        padding: 3px 10px;
+        width: fit-content;
+        color: var(--bs-paragraph-color);
+      }
+
+      &:hover {
+        background-color: var(--bs-primary-color);
+        border-color: var(--bs-primary-color);
+
+        .plan-name,
+        .plan-price {
+          color: var(--bs-white-color);
+
+          span {
+            color: var(--bs-white-color) !important;
+          }
+        }
+
+        .feature-name {
+          background-color: var(--bs-black-color);
+          color: var(--bs-white-color);
+        }
+      }
+
+      &.active {
+        background-color: var(--bs-primary-color);
+        border-color: var(--bs-primary-color);
+
+        .plan-name,
+        .plan-price {
+          color: var(--bs-white-color);
+
+          span {
+            color: var(--bs-white-color) !important;
+          }
+        }
+
+        .feature-name {
+          background-color: var(--bs-black-color);
+          color: var(--bs-white-color);
+        }
+      }
+    }
+
+    .tab-pane.fade {
+      transform: translateX(25px);
+      transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    }
+
+    .tab-pane.fade.active.show {
+      transform: translateX(0);
+    }
+
+    .tab-content {
+      .feature-title {
+        margin-bottom: 34px;
+      }
+
+      .feature-list {
+        ul {
+          li {
+            padding-bottom: 30px;
+            color: var(--bs-paragraph-color);
+            position: relative;
+
+            &:last-child {
+              padding-bottom: 0;
+            }
+          }
+        }
+
+        .checkmark {
+          background-color: var(--bs-color2);
+          width: 30px;
+          height: 30px;
+          flex: 0 0 auto;
+          color: var(--bs-primary-color);
+
+          &.uncheck {
+            background: var(--bs-bg-color1);
+            color: var(--bs-paragraph-color);
+          }
+        }
+      }
+    }
+  }
+}

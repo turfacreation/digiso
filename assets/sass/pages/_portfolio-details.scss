@@ -1,0 +1,87 @@
+/*===================================
+	35. Portfolio Details Page CSS start
+====================================*/
+.ep-portfolio-details-section {
+  .portfolio-sidebar {
+    .broucher {
+      &.project-information {
+        ul {
+          li {
+            a {
+              padding: 14px 20px;
+
+              .text {
+                .icon {
+                  width: 45px;
+                  height: 45px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 50%;
+                  background: var(--bs-black-color);
+                  color: var(--bs-white-color);
+                  font-size: 14px;
+                }
+
+                .info {
+                  h6 {
+                    transition: var(--bs-transition);
+                  }
+
+                  p {
+                    color: var(--bs-paragraph-color);
+                    transition: var(--bs-transition);
+                  }
+                }
+              }
+
+              &:hover {
+
+                h6,
+                p {
+                  color: var(--bs-white-color) !important;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .portfolio-content {
+    p {
+      margin-bottom: 30px;
+    }
+
+    .inner-content {
+      .play-btn{
+        width: 57px;
+        height: 57px;
+      }
+      ul {
+        li {
+          color: var(--bs-paragraph-color);
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px;
+          margin-bottom: 5px;
+          padding-left: 24px;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            color: var(--bs-primary-color);
+            font-size: 16px;
+            content: "\f336";
+            font-family: "Font Awesome 6 Pro";
+          }
+        }
+      }
+    }
+  }
+}

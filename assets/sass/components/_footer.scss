@@ -1,0 +1,143 @@
+/*=============================
+	28. Footer CSS Start
+===============================*/
+.tc_footer_section {
+	.footer_content {
+		padding: 101px 0 34px 0;
+		.text {
+			.footer_title {
+				font-size: 64px;
+				font-weight: 700;
+				line-height: 102%;
+				max-width: 660px;
+				margin: 0 auto 20px;
+				@media (max-width: 991.98px) {
+					font-size: 54px;
+				}
+				@media (max-width: 767.98px) {
+					font-size: 44px;
+				}
+				@media (max-width: 575.98px) {
+					font-size: 34px;
+				}
+			}
+		}
+		.footer_menu {
+			margin-top: 103px;
+			padding: 17px 0;
+			border-top: 1px solid var(--border);
+			border-bottom: 1px solid var(--border);
+			.menus {
+				ul {
+					display: flex;
+					align-items: center;
+					gap: 28px;
+					flex-wrap: wrap;
+					row-gap: 6px;
+					@media (max-width: 991.98px) {
+						justify-content: center !important;
+					}
+					@media (max-width: 575.98px) {
+						gap: 15px;
+					}
+					li {
+						a {
+							font-size: 18px;
+							font-weight: 600;
+							text-transform: uppercase;
+							@media (max-width: 1199.98px) {
+								font-size: 15px;
+								font-weight: 500;
+							}
+							@media (max-width: 575.98px) {
+								font-size: 10px;
+								font-weight: 400;
+							}
+						}
+					}
+				}
+			}
+		}
+		.footer_copyright {
+			padding-top: 33px;
+			.social_icon {
+				ul {
+					display: flex;
+					justify-content: start;
+					align-items: center;
+					gap: 17px;
+					@media (max-width: 991.98px) {
+						justify-content: center !important;
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*===========================================
+Home 2 Footer CSS Start
+===========================================*/
+
+.tc_footer_section_home2 {
+	.menu {
+		li {
+			a {
+				.btn_normal {
+					color: var(--paragraph-color);
+				}
+			}
+		}
+	}
+	.branding_agency {
+		p {
+			max-width: 250px;
+		}
+	}
+	.social_icon {
+		ul {
+			li {
+				a {
+					img {
+						width: 25px;
+						height: 25px;
+						border: 1px solid var(--border);
+						padding: 5px;
+						border-radius: 100px;
+					}
+				}
+			}
+		}
+	}
+	.footer_copyright {
+		border-top: 1px solid var(--border);
+	}
+}
+/* back to top button */
+.scroll-to-top {
+	background: var(--bs-primary-color);
+	width: 40px;
+	height: 40px;
+	color: var(--bs-white-color);
+	border-radius: 100px;
+	border: 0;
+	bottom: -45px;
+	right: 20px;
+	opacity: 0;
+	visibility: hidden;
+	font-size: 15px;
+	z-index: 99;
+	cursor: pointer;
+	transition: var(--bs-transition);
+
+	&:hover {
+		background-color: var(--bs-black-color);
+	}
+}
+
+.scroll-to-top.show {
+	opacity: 1;
+	visibility: visible;
+	bottom: 20px;
+}

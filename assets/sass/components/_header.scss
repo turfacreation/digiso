@@ -1,0 +1,286 @@
+/*=============================
+	12. Header CSS Start
+===============================*/
+@use "../common/common";
+/*
+.tc_header_section {
+	border-bottom: 1px solid var(--border);
+	.container-fluid {
+		padding: 0 80px;
+	}
+	.navbar {
+		padding: 0;
+		.navbar-nav {
+			list-style: none;
+			li {
+				margin: 0 18px;
+				position: relative;
+				a {
+					padding: 0;
+					font-family: var(--font-grotesque);
+					font-size: 18px;
+					font-weight: 500;
+					line-height: 90px;
+					color: var(--black-color);
+					transition: var(--transition);
+				}
+
+				&.has-dropdown > {
+					a {
+						&::after {
+							content: "\f107";
+							font-family: "Font Awesome 6 Pro";
+							margin-left: 4px;
+							top: 1px;
+							font-size: 12px;
+							position: relative;
+						}
+					}
+				}
+				.sub-menu {
+					list-style: none;
+					position: absolute;
+					width: 250px;
+					background: var(--white-color);
+					border: 1px solid var(--border);
+					top: 100%;
+					left: 0;
+					visibility: hidden;
+					opacity: 0;
+					transition: var(--transition);
+					transform: scaleY(0);
+					transform-origin: top;
+
+					li {
+						margin: 0;
+						a {
+							padding: 11px 20px;
+							display: block;
+							line-height: 28px;
+							position: relative;
+							border-bottom: 1px solid var(--border);
+
+							&::after {
+								position: absolute;
+								top: 50%;
+								transform: translateY(-50%) rotate(-90deg);
+								right: 20px;
+							}
+
+							&:hover {
+								background: var(--primary-color);
+							}
+						}
+						.sub-menu {
+							left: 100%;
+							top: 0;
+						}
+					}
+				}
+				&:hover > {
+					.sub-menu {
+						visibility: visible;
+						opacity: 1;
+						transform: scaleY(1);
+					}
+				}
+			}
+		}
+	}
+	.header_btn {
+		a {
+			font-size: 18px;
+			font-weight: 600;
+			text-decoration: underline;
+			transition: var(--transition);
+			&:hover {
+				background: var(--secondary-color);
+			}
+		}
+	}
+}
+*/
+/*=============================
+    12. Header CSS Start (Modified with Smooth Hover & Neon Effects)
+===============================*/
+.tc_header_section {
+    border-bottom: 1px solid var(--border);
+    z-index: 999;
+    position: relative;
+    
+    .container-fluid {
+        padding: 0 80px;
+    }
+    
+    .navbar {
+        padding: 0;
+        
+        .navbar-nav {
+            list-style: none;
+            
+            li {
+                margin: 0 18px;
+                position: relative;
+                
+                a {
+                    padding: 0;
+                    font-family: var(--font-grotesque);
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 90px;
+                    color: var(--black-color);
+                    transition: var(--transition);
+                }
+
+                /* =========================================================
+                   👉 [ADDED] 1. Main Menu Neon Border Left-to-Right Effect
+                   ========================================================= */
+                & > a.nav-link {
+                    position: relative;
+                    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 25px; /* লাইনের পজিশন অ্যাডজাস্ট করার জন্য */
+                        left: 0;
+                        width: 0;
+                        height: 2px;
+                        background: var(--black-color); /* আপনার থিমের সাথে মিল রেখে নিওন রেড/পিংঙ্ক কালার */
+                        border-radius: 10px;
+                        /* Neon Glow Effect */
+                        box-shadow: 0 0 8px var(--white-color), 0 0 15px var(--white-color), 0 0 25px var(--black-color);
+                        transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+                    }
+                }
+                
+                /* হোভার করলে নিওন বর্ডারটি বাম থেকে ডানে ১০০% ছড়াবে */
+                &:hover > a.nav-link::before {
+                    width: 100%;
+                }
+
+                /* =========================================================
+                   👉 [MODIFIED] 2. Main Menu Down Arrow to Up Arrow Smooth Rotation
+                   ========================================================= */
+                &.has-dropdown > {
+                    a {
+                        display: inline-flex;
+                        align-items: center;
+                        
+                        &::after {
+                            content: "\f107"; /* Down Arrow Unicode */
+                            font-family: "Font Awesome 6 Pro";
+                            margin-left: 6px;
+                            top: 0px;
+                            font-size: 13px;
+                            position: relative;
+                            display: inline-block;
+                            /* স্মুথ অ্যানিমেশনের জন্য ট্রানজিশন যোগ করা হয়েছে */
+                            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        }
+                    }
+                }
+
+                /* হোভার করলে ডাউন অ্যারোটি ১৮০ ডিগ্রি ঘুরে আপ অ্যারো হবে */
+                &:hover > {
+                    a {
+                        &::after {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                .sub-menu {
+                    list-style: none;
+                    position: absolute;
+                    width: 250px;
+                    background: var(--white-color);
+                    border: 1px solid var(--border);
+                    top: 100%;
+                    left: 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: var(--transition);
+                    transform: scaleY(0);
+                    transform-origin: top;
+
+                    li {
+                        margin: 0;
+                        
+                        a {
+                            padding: 11px 20px;
+                            display: block;
+                            line-height: 28px;
+                            position: relative;
+                            border-bottom: 1px solid var(--border);
+
+                            /* সাব-মেনুর সাধারণ এঙ্কর ট্যাগে হোভার ব্যাকগ্রাউন্ড */
+                            &:hover {
+                                background: var(--primary-color);
+                            }
+                        }
+
+                        /* =========================================================
+                           👉 [ADDED] 3. Submenu Left Arrow to Right Arrow Smooth Effect
+                           ========================================================= */
+                        &.has-dropdown > a {
+                            &::after {
+                                content: "\f104"; /* Left Arrow Unicode (\f104) */
+                                font-family: "Font Awesome 6 Pro";
+                                position: absolute;
+                                top: 50%;
+                                right: 20px;
+                                font-size: 12px;
+                                display: inline-block;
+                                transform: translateY(-50%) rotate(0deg);
+                                /* স্মুথ ট্রানজিশন */
+                                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+                            }
+                        }
+
+                        /* হোভার করলে সাব-মেনুর লেফট অ্যারোটি ১৮০ ডিগ্রি ঘুরে রাইট অ্যারো হবে */
+                        &:hover > a {
+                            &::after {
+                                transform: translateY(-50%) rotate(180deg);
+                            }
+                        }
+
+                        /* সাব-মেনুর ভেতরের পরবর্তী ড্রপডাউন পজিশনিং */
+                        .sub-menu {
+                            left: 100%;
+                            top: 0;
+                        }
+                    }
+                }
+
+                /* ড্রপডাউন মেনু শো করার ট্রানজিশন */
+                &:hover > {
+                    .sub-menu {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: scaleY(1);
+                    }
+                }
+            }
+        }
+    }
+
+    .header_btn {
+        a {
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: underline;
+            transition: var(--transition);
+            
+            &:hover {
+                background: var(--secondary-color);
+            }
+        }
+    }
+}
+
+/*
+### পরিবর্তনসমূহ এবং কার্যপদ্ধতি (Explanation):
+1. **অ্যারো ইমেজ/আইকন পরিবর্তন না করে রোটেট করা হয়েছে:** আমরা সরাসরি ফন্ট-অসাম আইকনটির `content` পরিবর্তন করিনি। কারণ কন্টেন্ট রানটাইমে পরিবর্তন করলে কোনো ট্রানজিশন বা অ্যানিমেশন হয় না, হুট করে পাল্টে যায়। তাই আমরা CSS `transform: rotate(180deg)` ব্যবহার করেছি। এর ফলে ঘূর্ণনটি অত্যন্ত নিখুঁত এবং স্মুথ হবে।
+2. **Neon Underline (নিওন আন্ডারলাইন):** মেইন মেনু লিঙ্কের জন্য `::before` সিউডো-এলিমেন্ট ব্যবহার করা হয়েছে। এর `box-shadow` প্রোপার্টিতে গ্লো-এফেক্ট দিয়ে একটি নিওন ভাইব তৈরি করা হয়েছে, যা হোভার করার সাথে সাথে বাম দিক থেকে ডান দিকে বড় হয়ে যাবে।
+3. **সাব-মেনু অ্যারো:** সাব-মেনুর যে আইটেমটিতে ড্রপডাউন আছে (`li.has-dropdown`), সেটির অ্যারোকে ডিফল্ট হিসেবে লেফট ডিরেকশন দেওয়া হয়েছে এবং হোভার করলে সেটি স্মুথলি রাইট ডিরেকশনে ঘুরে যাবে।
+*/

@@ -1,0 +1,73 @@
+/*=============================
+	04. Heading CSS Start
+===============================*/
+h1 {
+	font-size: 96px;
+	font-weight: 700;
+	@media (max-width: 1399.98px) {
+		font-size: 86px;
+	}
+	@media (max-width: 1199.98px) {
+		font-size: 76px;
+	}
+	@media (max-width: 991.98px) {
+		font-size: 55px;
+		margin-top: 25px;
+	}
+	@media (max-width: 767.98px) {
+		font-size: 45px;
+		margin-top: 25px;
+	}
+	@media (max-width: 575.98px) {
+		font-size: 35px;
+		margin-top: 25px;
+	}
+}
+
+h2 {
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 120%;
+	@media (max-width: 1199.98px) {
+		font-size: 40px;
+	}
+	@media (max-width: 991.98px) {
+		font-size: 32px;
+	}
+	@media (max-width: 575.98px) {
+		font-size: 27px;
+	}
+}
+
+h3 {
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 132%;
+	@media (max-width: 1199.98px) {
+		font-size: 28px;
+	}
+	@media (max-width: 991.98px) {
+		font-size: 25px;
+	}
+	@media (max-width: 575.98px) {
+		font-size: 20px;
+	}
+}
+
+h4 {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 34px;
+}
+
+h5 {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 30px;
+}
+
+.heading-six {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 28px;
+}

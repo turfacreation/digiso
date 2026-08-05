@@ -1,0 +1,97 @@
+/*=============================
+	22. Counter CSS Start
+===============================*/
+.tc_portfolio_counter {
+  //padding-bottom: 200px;
+  // .portfolio_counter {
+  // 	border-top: 1px solid var(--border);
+  // 	//border-bottom: 1px solid var(--border);
+  // 	.counter-item-box {
+  // 		position: relative;
+  // 		padding: 33px 30px;
+
+  // 		.counter-number {
+  // 			font-family: var(--font-sora);
+  // 			font-size: 96px;
+  // 			font-weight: 800;
+  // 			line-height: 110%;
+  // 			&.solid {
+  // 				color: var(--black);
+  // 				transition: var(--transition);
+  // 			}
+  // 			&.stroke {
+  // 				color: #fafafa; // সেকশনের ব্যাকগ্রাউন্ড কালার দিন যাতে ওভারল্যাপ ঢেকে যায়
+  // 				-webkit-text-stroke: 3px #12151c; // আউটলাইন বর্ডার
+  // 				paint-order: stroke fill; // বর্ডারকে লেখার ফিল কালারের পেছনে পাঠাবে
+  // 				transition: var(--transition);
+  // 			}
+  // 		}
+  // 		.counter-title {
+  // 			font-size: 16px;
+  // 			font-weight: 400;
+  // 			color: var(--paragraph-color);
+  // 			line-height: 140%;
+  // 		}
+  // 	}
+  // }
+
+  .portfolio_counter {
+    border-top: 1px solid var(--border);
+
+    .counter-item-box {
+      // position: relative;
+      padding: 33px 30px;
+
+      .counter-number {
+        font-family: var(--font-sora);
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -3px;
+        display: inline-flex;
+        align-items: flex-end;
+        @media (max-width: 1199.98px) {
+          font-size: 86px;
+        }
+        .letter {
+          font-family: var(--font-sora);
+          font-size: 96px;
+          font-weight: 700;
+          margin-bottom: 7px;
+          display: inline-block;
+          line-height: 1;
+          @media (max-width: 1199.98px) {
+            font-size: 86px;
+          }
+        }
+        &.solid {
+          color: var(--black);
+        }
+
+        &.stroke {
+          color: #fafafa;
+          -webkit-text-stroke: 3px #12151c;
+          paint-order: stroke fill;
+        }
+      }
+
+      .counter-title {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--paragraph-color);
+      }
+    }
+  }
+  .lines {
+    .line {
+      background: linear-gradient(
+        to bottom,
+        rgba(226, 228, 230, 1) 0%,
+        /* ওপরে স্পষ্ট ও সুন্দর লাইট সিলভার কালার */ rgba(226, 228, 230, 0) 100%
+          /* নিচে নামার সাথে সাথে সম্পূর্ণ অদৃশ্য/ট্রান্সপারেন্ট */
+      );
+      width: 1px;
+    }
+  }
+}

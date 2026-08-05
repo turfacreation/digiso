@@ -1,0 +1,214 @@
+/*=============================
+	09. Animation CSS Start
+===============================*/
+/* Services overlay animation */
+.overlay-shape {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 1;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::before {
+      animation: overlayShape 1s linear;
+    }
+  }
+}
+
+.hover-effect {
+  &:hover {
+    .overlay-shape {
+      &::before {
+        animation: overlayShape 1s linear;
+      }
+    }
+  }
+}
+
+@keyframes overlayShape {
+  0% {
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    height: 250%;
+    opacity: 0;
+  }
+}
+
+/* Riplle animation */
+.ripple::before,
+.ripple::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 0 rgba(var(--ienet-white-rgb, 255, 255, 255), 0.8);
+  animation: ripple 3s infinite;
+  border-radius: 50%;
+}
+
+.ripple::before {
+  animation-delay: 0.9s;
+  content: "";
+  position: absolute;
+}
+
+.ripple::after {
+  animation-delay: 0.5s;
+  content: "";
+  position: absolute;
+}
+
+@keyframes ripple {
+  70% {
+    box-shadow: 0 0 0 40px rgba(10, 165, 205, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(10, 165, 205, 0);
+  }
+}
+
+/* Work process line animation */
+@keyframes line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* swiper slide animation */
+.slide-transtion {
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+/* Banner shape animation */
+@keyframes arrowDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(20px);
+    opacity: 0.3;
+  }
+}
+
+/* Map ripple animation */
+@keyframes mapRipple {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Map arrow move animation */
+@keyframes arrowMove {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Cta truck draw animation */
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  75% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 4500;
+  }
+}
+
+
+/* Loader css */
+.fullpage_loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bs-primary-color);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loader {
+    width: 84px;
+    height: 84px;
+    position: relative;
+  }
+
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--bs-white-color);
+    transform: translate(-50%, -100%) scale(0);
+    animation: push 2s infinite linear;
+  }
+
+  .loader:after {
+    animation-delay: 1s;
+  }
+
+  @keyframes push {
+
+    0%,
+    50% {
+      transform: translate(-50%, 0%) scale(1)
+    }
+
+    100% {
+      transform: translate(-50%, -100%) scale(0)
+    }
+  }
+}

@@ -1,0 +1,97 @@
+/*===============================
+	33. Team Details Page CSS Start
+=================================*/
+.ep-team-details-section {
+	.single-team-info {
+		background: var(--bs-bg-color2);
+		padding: 60px;
+		border-radius: 60px;
+		gap: 60px;
+
+		@media (max-width:1199.98px) {
+			padding: 30px;
+			gap: 24px;
+			border-radius: 30px;
+		}
+
+		@media (max-width:575.98px) {
+			padding: 24px;
+			gap: 24px;
+		}
+
+		.text {
+			.designation {
+				font-family: var(--bs-font-roboto);
+				color: var(--bs-primary-color);
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 20px;
+			}
+
+			hr {
+				border-color: 1px solid var(--bs-border-color);
+				margin: 35px 0;
+			}
+
+			.personal-info {
+				li {
+					color: var(--bs-paragraph-color);
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 26px;
+					margin-bottom: 10px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+
+					strong {
+						font-family: var(--bs-font-inter);
+						font-size: 18px;
+						font-weight: 500;
+						line-height: 28px;
+						min-width: 140px;
+						display: inline-block;
+						@media (max-width:575.98px) {
+							min-width: 112px;
+						}
+					}
+				}
+			}
+
+			.social-icon {
+				ul {
+					li {
+						a {
+							background: rgba(225, 0, 6, 0.1);
+							color: var(--bs-primary-color);
+
+							&:hover {
+								background: var(--bs-primary-color);
+								color: var(--bs-white-color);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.skill-and-contact {
+		.custom-gap {
+			--bs-gutter-x: 60px;
+		}
+
+		.skills {
+			.custom-progressbar {
+				&.style2 {
+					.progress-bar {
+						.num {
+							color: var(--bs-paragraph-color);
+						}
+					}
+				}
+			}
+		}
+	}
+}
