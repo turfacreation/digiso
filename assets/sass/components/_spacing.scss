@@ -31,6 +31,9 @@
 }
 .mb-30 {
 	margin-bottom: 30px;
+	@media (max-width: 1199.98px) {
+		margin-bottom: 20px;
+	}
 	@media (max-width: 991.98px) {
 		margin-bottom: 15px;
 	}
@@ -159,6 +162,9 @@
 }
 .pb-120 {
 	padding-bottom: 120px;
+	@media (max-width: 1199.98px) {
+		padding-bottom: 70px;
+	}
 }
 .pt-170 {
 	padding-top: 170px;

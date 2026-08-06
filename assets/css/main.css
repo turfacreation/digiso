@@ -627,6 +627,11 @@ h5 {
 .mb-30 {
   margin-bottom: 30px;
 }
+@media (max-width: 1199.98px) {
+  .mb-30 {
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 991.98px) {
   .mb-30 {
     margin-bottom: 15px;
@@ -786,6 +791,11 @@ h5 {
 
 .pb-120 {
   padding-bottom: 120px;
+}
+@media (max-width: 1199.98px) {
+  .pb-120 {
+    padding-bottom: 70px;
+  }
 }
 
 .pt-170 {
@@ -3076,29 +3086,49 @@ About Section Home 2
 /*=====================================
 Testimonial Home 2 CSS End
 =======================================*/
+@media (max-width: 575.98px) {
+  .tc_testimonial_home2_section {
+    padding: 0 20px !important;
+  }
+}
 .tc_testimonial_home2_section {
   border-top: 1px solid var(--border);
 }
 .tc_testimonial_home2_section .testimonial_home2_title p {
   max-width: 477px;
 }
-.tc_testimonial_home2_section .testimonial_right_info {
+@media (max-width: 991.98px) {
+  .tc_testimonial_home2_section .testimonial_right_info_home2 {
+    display: none;
+  }
+}
+.tc_testimonial_home2_section .testimonial_right_info_home2 .testimonial_right_info {
   padding: 35px 68px 35px 45px;
   background: rgba(21, 21, 21, 0.91);
   border-radius: 10px 0px 0px 10px;
 }
-.tc_testimonial_home2_section .testimonial_right_info h5 {
+.tc_testimonial_home2_section .testimonial_right_info_home2 .testimonial_right_info h5 {
   font-weight: 500;
   color: var(--white-color);
 }
 .tc_testimonial_home2_section .testimonial_home2_content .textimonial_left_info_home2 {
   border-radius: 0px 10px 10px 0px;
 }
+@media (max-width: 991.98px) {
+  .tc_testimonial_home2_section .testimonial_home2_content .textimonial_left_info_home2 {
+    border-radius: 0px 0px 0px 0px;
+  }
+}
 .tc_testimonial_home2_section .testimonial_home2_content .overlay {
   background: rgba(21, 21, 21, 0.91);
   padding: 84px 69px 84px 45px;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 991.98px) {
+  .tc_testimonial_home2_section .testimonial_home2_content .overlay {
+    padding: 40px 40px;
+  }
 }
 .tc_testimonial_home2_section .testimonial_home2_content .overlay .testimonial_info {
   gap: 40px;
@@ -3116,6 +3146,17 @@ Testimonial Home 2 CSS End
   font-weight: 500;
   color: var(--white-color);
   font-style: italic;
+}
+@media (max-width: 991.98px) {
+  .tc_testimonial_home2_section .testimonial_home2_content .overlay .testimonial_info .content p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 575.98px) {
+  .tc_testimonial_home2_section .testimonial_home2_content .overlay .testimonial_info .testimonial_down_info .testimonial_star {
+    display: none !important;
+  }
 }
 
 /*=============================
