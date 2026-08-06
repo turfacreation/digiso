@@ -4426,19 +4426,8 @@ Home 2 Footer CSS Start
     padding: 0 15px;
   }
 }
-@media (max-width: 991.98px) {
-  .tc_footer_section_home2 .footer_content .footer_menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-@media (max-width: 991.98px) {
-  .tc_footer_section_home2 .footer_content .footer_menu .footer_item {
-    margin-top: -100px;
-  }
+.tc_footer_section_home2 .footer_content {
+  margin-top: -100px;
 }
 @media (max-width: 767.98px) {
   .tc_footer_section_home2 .footer_content .footer_menu .footer_item .footer_logo {
@@ -4484,6 +4473,16 @@ Home 2 Footer CSS Start
 .tc_footer_section_home2 .footer_copyright {
   border-top: 1px solid var(--border);
   padding: 20px 0 45px 0;
+}
+@media (max-width: 991.98px) {
+  .tc_footer_section_home2 .footer_copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 /* back to top button */
