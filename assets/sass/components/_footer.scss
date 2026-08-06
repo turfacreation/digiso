@@ -80,22 +80,85 @@
 Home 2 Footer CSS Start
 ===========================================*/
 
+// .tc_footer_section_home2 {
+// 	@media (max-width: 575.98px) {
+// 		padding: 0 15px;
+// 	}
+// 	.footer_content {
+// 		.footer_menu {
+// 			.footer_item {
+// 				display: grid;
+// 				grid-template-columns: repeat(4, 1fr);
+// 				justify-content: space-between;
+// 				align-items: baseline;
+// 				@media (max-width: 767.98px) {
+// 					display: grid;
+// 					grid-template-columns: repeat(2, auto);
+// 					justify-content: space-between;
+// 				}
+// 				.footer_logo {
+// 					@media (max-width: 767.98px) {
+// 						order: 1;
+// 					}
+// 				}
+// 				.pages {
+// 					@media (max-width: 767.98px) {
+// 						order: 2;
+// 					}
+// 				}
+// 				.cms {
+// 					padding-left: 15px;
+// 					@media (max-width: 767.98px) {
+// 						order: 4;
+// 					}
+// 				}
+// 				.branding_agency {
+// 					@media (max-width: 767.98px) {
+// 						order: 3;
+// 					}
+
+// 					p {
+// 						max-width: 250px;
+// 					}
+// 					.social_icon {
+// 						ul {
+// 							li {
+// 								a {
+// 									img {
+// 										width: 25px;
+// 										height: 25px;
+// 										border: 1px solid var(--border);
+// 										padding: 5px;
+// 										border-radius: 100px;
+// 									}
+// 								}
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	.footer_copyright {
+// 		border-top: 1px solid var(--border);
+// 		padding: 20px 0 45px 0;
+// 	}
+// }
+
 .tc_footer_section_home2 {
 	@media (max-width: 575.98px) {
-						padding: 0 15px;
-					}
+		padding: 0 15px;
+	}
 	.footer_content {
 		.footer_menu {
-			.footer_item {
-				display: grid;
-				grid-template-columns: repeat(4, 1fr);
-				justify-content: space-between;
-				align-items: baseline;
-				@media (max-width: 767.98px) {
-					display: grid;
-					grid-template-columns: repeat(2, auto);
-					justify-content: space-between;
+			@media (max-width: 991.98px) {
+					display: flex;
+					justify-content: space-around;
 					
+				}
+			.footer_item {
+				@media (max-width: 991.98px) {
+					margin-top: -100px;
 				}
 				.footer_logo {
 					@media (max-width: 767.98px) {

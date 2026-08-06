@@ -157,11 +157,25 @@ Testimonial Home 2 CSS End
 	border-top: 1px solid var(--border);
 
 	.testimonial_home2_title {
-		// @media (max-width: 991.98px) {
-		// 	padding-bottom: 0px;
-		// }
+		@media (max-width: 991.98px) {
+			padding-bottom: 0px;
+		}
 		p {
 			max-width: 477px;
+		}
+		.row {
+			@media (max-width: 991.98px) {
+				flex-direction: column-reverse;
+			}
+			@media (max-width: 767.98px) {
+				flex-direction: column-reverse;
+			}
+			@media (max-width: 575.98px) {
+				flex-direction: column-reverse;
+			}
+			@media (max-width: 375.98px) {
+				flex-direction: column-reverse;
+			}
 		}
 	}
 	.testimonial_right_info_home2 {
